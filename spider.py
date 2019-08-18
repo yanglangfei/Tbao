@@ -9,7 +9,10 @@ import re
 from pyquery import PyQuery as pq
 import pymongo
 from config import *
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import ActionChains
 
+# 爬取 淘宝商品列表
 client = pymongo.MongoClient(MONGO_URL)
 db = client[MONGO_DB]
 option = webdriver.ChromeOptions()
